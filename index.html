@@ -10,24 +10,90 @@
         li{
             color:tomato;
         }
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet;
+        }
     </style>
+
 </head>
 <body>
     <header>
         <h1>Welcome to my DOM </h1>
     </header>
     <main>
-        <h1>MY Awesome DOM de baba</h1>
-        <ul>
-            <li>Jalali Set </li>
-            <li>Shafayet</li>
-            <li>BonoBASh</li>
-        </ul>
+        <section>
+            <h1>MY Awesome DOM de baba</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus, voluptatum temporibus fugiat delectus omnis porro, illum maxime architecto voluptatibus qui mollitia perferendis dignissimos dolorum!</p>
+            <ul>
+                <li>Jalali Set </li>
+                <li>Shafayet</li>
+                <li>BonoBASh</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id ="fruits-title" class = "some-class random-class blue-bg">Fruits I like </h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul>
+                <li class="important-places">Soondarban</li>
+                <li class="important-places">Bandorban</li>
+                <li class="important-places">Kataban</li>
+                <li>Shalbon</li>
+            </ul>
+        </section>
     </main>
     <!-- used be javaScript -->
-    <script> 
-        console.log('Adding JS inside the html file')
-    </script>
     <script src="js/dom.js"></script>
+    <script> 
+        // const student = {
+        //     name : 'ABDUL',
+        //     ID: 11,
+        //     study : function(time){
+        //         console.log(time, 'study kortese');
+        //     }
+        // }
+        //     console.log('Adding JS inside the html file')
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for (const li of liCollection){
+            // console.log(li);
+            // console.log(li.innerText);
+        }
+
+        //Option-1: getElementsByTagName
+        const alHeadings = document.getElementsByTagName('h1');
+        for(const h1 of alHeadings){
+            // console.log(h1.innerText);
+        }
+        // Option-2:getElementById
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText='Fruits changed by Js';
+        
+        //Option-3: getElementsByClassName
+        const places = document.getElementsByClassName('important-places');
+        for(const place of places){
+            console.log(places);
+        }
+
+        //option-4: querySelector
+        // option-5: querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li');
+        // console.log(someLi);
+        for(const li of someLi){
+            console.log(li.innerText);
+        }
+       
+        </script>
 </body>
 </html>
