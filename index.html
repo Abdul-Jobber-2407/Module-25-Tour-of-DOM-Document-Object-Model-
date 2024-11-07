@@ -21,18 +21,20 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to my DOM </h1>
+        <h1>MY Awesome DOM de baba</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus, voluptatum temporibus fugiat delectus omnis porro, illum maxime architecto voluptatibus qui mollitia perferendis dignissimos dolorum!</p>
     </header>
-    <main>
+    <main id="main-container">
         <section>
-            <h1>MY Awesome DOM de baba</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur repellendus, voluptatum temporibus fugiat delectus omnis porro, illum maxime architecto voluptatibus qui mollitia perferendis dignissimos dolorum!</p>
+
+            <h1>Welcome to my DOM </h1>
             <ul>
                 <li>Jalali Set </li>
                 <li>Shafayet</li>
                 <li>BonoBASh</li>
             </ul>
         </section>
+
         <section>
             <h1 id ="fruits-title" class = "some-class random-class blue-bg">Fruits I like </h1>
             <ul>
@@ -42,9 +44,9 @@
             </ul>
         </section>
 
-        <section>
-            <h1 id="places-title">Places I like to visit</h1>
-            <ul>
+        <section id="places-container" class="text-center large-text">
+            <h1 id="places-title" >Places I like to visit</h1>
+            <ul id="place-list">
                 <li class="important-places">Soondarban</li>
                 <li class="important-places">Bandorban</li>
                 <li class="important-places">Kataban</li>
@@ -54,6 +56,8 @@
     </main>
     <!-- used be javaScript -->
     <script src="js/dom.js"></script>
+    <script src="js/styleInJs.js"></script>
+    <script src="js/append.js"></script>
     <script> 
         // const student = {
         //     name : 'ABDUL',
@@ -83,7 +87,7 @@
         //Option-3: getElementsByClassName
         const places = document.getElementsByClassName('important-places');
         for(const place of places){
-            console.log(places);
+            // console.log(places);
         }
 
         //option-4: querySelector

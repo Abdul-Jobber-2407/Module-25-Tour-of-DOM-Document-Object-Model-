@@ -58,6 +58,50 @@ document.getElementsByClassName('fruits-container')[0].innerText
 
 document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2>ABC wow DOM is changing </h2>'
 
+//*********************Class:07 *******************//
+const placesContiner = document.getElementById('places-container')
+undefined
 
+placesContainer
 
+placesContainer.childNodes
+NodeList(5) [text, h1#places-title, text, ul, text]\
+
+placesContainer.childNodes[1]
+<h1 id=​"places-title">​Places I like to visit​</h1>​
+
+placesContainer.childNodes[3].childNodes
+NodeList(9) [text, li.important-places, text, li.important-places, text, li.important-places, text, li, text]
+//---------------------------------------------------------
+document.createElement('p')
+<p>​</p>​
+document.createElement('span')
+<span>​</span>​
+document.createElement('div')
+<div>​</div>​
+document.createElement('li')
+<li>​</li>​
+document.createElement('section')
+<section>​</section>​
+//-------------------------------------------------------
+const li = document.createElement('li')
+undefined
+li.innerText = 'Brand New place go to'
+'Brand New place go to'
+li
+<li>​Brand New place go to​</li>​
+//---------------------------------------------------------
+const li2 = document.createElement('li')
+undefined
+
+li2.innerText = 'another dynamic li'
+'another dynamic li'
+
+placesUL.appendChild(li2)
+<li> </li>
+
+placesUL.parentNode
+
+placesUL.parentNode.parentNode
+//--------------------------------------------------------------
 
